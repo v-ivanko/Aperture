@@ -1,7 +1,20 @@
+@font-face {
+    font-family: 'poppinsregular';
+    src: url('../fonts/poppins-regular-webfont.eot');
+    src: url('../fonts/poppins-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/poppins-regular-webfont.woff2') format('woff2'),
+    url('../fonts/poppins-regular-webfont.woff') format('woff'),
+    url('../fonts/poppins-regular-webfont.ttf') format('truetype'),
+    url('../fonts/poppins-regular-webfont.svg#poppinsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 *{
     padding: 0;
     margin: 0;
-    font-family: Poppins;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 header{
     background-color: #181818;
@@ -59,6 +72,7 @@ header nav li:last-of-type a{
     align-items: end;
     justify-content: center;
     padding-bottom: 71px;
+    position: relative;
 }
 .main_banner .container{
     max-width: 580px;
@@ -93,6 +107,130 @@ header nav li:last-of-type a{
     font-weight: 400;
     line-height: 20px;
 }
+.icons{
+    position: absolute;
+    right: 40px;
+    bottom: 41px;
+    display: flex;
+    z-index: 3;
+}
+.icons li{
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; /* 100% */
+    margin-left: 16px;
+    list-style: none;
+}
+.icons li:before{
+    display: inline-block;
+    content: "";
+    background-image: url("../images/icon_1.png");
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    margin-bottom: -6px;
+}
+.icons li:nth-child(2):before{
+    background-image: url("../images/icon_2.png");
+}
+.icons li:nth-child(3):before{
+    background-image: url("../images/icon_3.png");
+    width: 32px;
+    margin-right: 7px;
+}
+.icons li:nth-child(4):before{
+    background-image: url("../images/icon_4.png");
+    width: 10px;
+    margin-right: 5px;
+}
+.what_we_do{
+    background-color: black;
+    padding-top: 113px;
+    padding-bottom: 84px;
+}
+.what_we_do .container h3{
+    color: #FFF;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px; /* 105% */
+    margin-bottom: 15px;
+}
+.what_we_do .container h4{
+    color: #C0C0C0;
+    text-align: center;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 130.435% */
+    margin-bottom: 42px;
+}
+.what_we_do .d-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.what_we_do .d-flex article{
+    margin-bottom: 16px;
+    max-width: 576px;
+    position: relative;
+}
+.what_we_do .d-flex article img{
+    width: 100%;
+    display: block;
+}
+.what_we_do .d-flex article .cards{
+    position: absolute;
+    bottom: 43px;
+    left: 30px;
+}
+.what_we_do .d-flex article .cards h4{
+    color: #FFF;
+    text-align: left;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.what_we_do .d-flex article .cards p{
+    color: #C0C0C0;;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    max-width: 516px;
+    margin-bottom: 26px;
+}
+.what_we_do .d-flex article .cards a{
+    border-radius: 14px;
+    background: #FFF;
+    padding: 5px 10px 5px 4px;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+    letter-spacing: 0.4px;
+    display: inline-flex;
+    align-items: center;
+}
+.what_we_do .d-flex article .cards a:before{
+    content: "";
+    width: 32px;
+    height: 32px;
+    margin-right: 6px;
+    background-image: url("../images/check.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
 .sunset{
     background-image: url("../images/sunset.jpg");
     background-size: cover;
@@ -101,6 +239,7 @@ header nav li:last-of-type a{
     align-items: center;
     justify-content: end;
     padding-right: 62px;
+    position: relative;
 }
 .sunset .container{
     max-width: 298px;
@@ -130,6 +269,7 @@ header nav li:last-of-type a{
     align-items: center;
     justify-content: end;
     padding-right: 87px;
+    position: relative;
 }
 .monstera .container{
     max-width: 273px;
@@ -163,7 +303,6 @@ header nav li:last-of-type a{
 .past_clients h2{
     color: #FFF;
     text-align: center;
-    font-family: Poppins;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -173,7 +312,6 @@ header nav li:last-of-type a{
 .past_clients h3{
     color: #C0C0C0;
     text-align: center;
-    font-family: Poppins;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -196,6 +334,7 @@ header nav li:last-of-type a{
     align-items: center;
     justify-content: end;
     padding-right: 106px;
+    position: relative;
 }
 .himalayas .container{
     max-width: 254px;
@@ -217,3 +356,81 @@ header nav li:last-of-type a{
     font-weight: 400;
     line-height: 20px; /* 142.857% */
 }
+.gear_cage{
+    min-height: 540px;
+    position: relative;
+    background-color: black;
+}
+.gear_cage:after{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("../images/gear.png");
+    background-size: cover;
+    content: "";
+    display: block;
+}
+.gear_cage .container{
+    max-width: 1240px;
+    align-items: center;
+    display: flex;
+    min-height: 540px;
+}
+.gear_cage .container article{
+    max-width: 514px;
+
+}
+.gear_cage .container h4{
+    color: #C0C0C0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+.gear_cage .container h3{
+    color: #FFF;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 114.286% */
+    margin-bottom: 14px;
+}
+.gear_cage .container p{
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    margin-bottom: 29px;
+}
+.gear_cage .container a{
+    border-radius: 14px;
+    background: #FFF;
+    padding: 5px 10px 5px 4px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+    letter-spacing: 0.4px;
+    display: inline-flex;
+    align-items: center;
+}
+.gear_cage .container a:before{
+
+    content: "";
+    width: 32px;
+    height: 32px;
+    margin-right: 6px;
+    background-image: url("../images/check.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
